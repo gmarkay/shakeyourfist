@@ -2,11 +2,8 @@
 const $ = require('jquery');
 const factory = require('./factory');
 const formatter = require('./formatter');
+// const fyou = require('./fyou');
 
-
-
-// let $startDate = $('#startDate');
-// let $endDate = $('#endDate');
 
 $('#submit').click(()=>{
   let $startDate = $('#startDate').val();
@@ -16,6 +13,9 @@ $('#submit').click(()=>{
     .then((data) => {
       formatter.formatData(data);
     });
+    // .then((fUrl)=>{
+    //       fyou.getFu(fUrl);
+    // });
 });
 
 

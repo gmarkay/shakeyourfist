@@ -17,14 +17,3 @@ module.exports.getAsteroids = (url) => {
     });
   });
 };
-
-  // url: nasaUrl,    
-  //   success: function(result){
-  //     console.log(result.near_earth_objects);
-
-  //     let neos = result.near_earth_objects;
-  //     console.log(Object.keys(neos, 'keys'));
-  //     let neoKeys = Object.keys(neos);
-  //   }
-
-  // });
