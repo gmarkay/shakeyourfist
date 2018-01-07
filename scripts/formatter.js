@@ -16,11 +16,10 @@ module.exports.formatData = (data) => {
   for (let i = 0; i < 3; i++) {
     newAst.push(asteroids.splice(Math.random() * (asteroids.length - 1), 1).pop());
   }
-  console.log(newAst, ' in formatter');
-  doesThisWork(newAst);
+  sendFuMessage(newAst);
 };
 
-function doesThisWork(newAst) {
+function sendFuMessage(newAst) {
 
   newAst.forEach((asteroid) => {
     let hazardous = asteroid.is_potentially_hazardous_asteroid;
@@ -29,8 +28,7 @@ function doesThisWork(newAst) {
     let fuMessage = [`ing/${name}/Griffin`, `look/${name}/Griffin`, `shakespeare/${name}/Griffin`];
     let urlEnd = fuMessage[Math.floor(Math.random() * fuMessage.length)];
     let fUrl = 'http://foaas.com/' + urlEnd;
-    console.log (hazardous, 'what');
-    console.log(date);
+ 
     fyou.getFu(fUrl, date, name, hazardous);
   });
 }
