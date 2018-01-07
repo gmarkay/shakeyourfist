@@ -23,10 +23,14 @@ module.exports.formatData = (data) => {
 function doesThisWork(newAst) {
 
   newAst.forEach((asteroid) => {
-    // let 
-    let fuMessage = [`ing/${asteroid.name}/Griffin`, `look/${asteroid.name}/Griffin`, `shakespeare/${asteroid.name}/Griffin`];
+    let hazardous = asteroid.is_potentially_hazardous_asteroid;
+    let date = asteroid.close_approach_data[0].close_approach_date;
+    let name = asteroid.name;
+    let fuMessage = [`ing/${name}/Griffin`, `look/${name}/Griffin`, `shakespeare/${name}/Griffin`];
     let urlEnd = fuMessage[Math.floor(Math.random() * fuMessage.length)];
     let fUrl = 'http://foaas.com/' + urlEnd;
-    fyou.getFu(fUrl);
+    console.log (hazardous, 'what');
+    console.log(date);
+    fyou.getFu(fUrl, date, name, hazardous);
   });
 }
