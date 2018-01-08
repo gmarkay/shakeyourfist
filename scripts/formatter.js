@@ -25,7 +25,7 @@ function sendFuMessage(newAst) {
     let hazardous = asteroid.is_potentially_hazardous_asteroid;
     let date = asteroid.close_approach_data[0].close_approach_date;
     let name = asteroid.name;
-    let fuMessage = [`ing/${name}/Griffin`, `look/${name}/Griffin`, `shakespeare/${name}/Griffin`];
+    let fuMessage = [`ing/${name}/Griffin`, `look/${name}/Griffin`, `shakespeare/${name}/Griffin`, `back/${name}/Griffin`, `cocksplat/${name}/Griffin	`];
     let urlEnd = fuMessage[Math.floor(Math.random() * fuMessage.length)];
     let fUrl = 'http://foaas.com/' + urlEnd;
  
